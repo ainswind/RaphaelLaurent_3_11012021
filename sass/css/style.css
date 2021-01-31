@@ -4,8 +4,16 @@
   overflow-x: hidden;
 }
 
-.wrapper, .position, .intro {
+.wrapper, .info, .position, .intro {
   width: 100%;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../css/roboto/Roboto-Regular.ttf");
+}
+body {
+  font-family: "Roboto";
 }
 
 header {
@@ -15,8 +23,29 @@ header {
   margin-top: 10px;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media all and (min-width: 320px) {
+  nav {
+    width: 300px;
+  }
+}
+
 img {
   object-fit: cover;
+}
+
+@media all and (min-width: 320px) {
+  .logo {
+    width: 100px;
+  }
+}
+
+.icone {
+  width: 15px;
 }
 
 .intro {
@@ -28,7 +57,7 @@ img {
 
 .position {
   padding: 10px 0 10px 0;
-  border: solid 1px solid #eaeaea;
+  border: 1px solid #eaeaea;
   background-color: #eaeaea;
   display: flex;
   flex-direction: row;
@@ -39,7 +68,7 @@ img {
 }
 
 .info {
-  border: solid 1px solid #f2f2f2;
+  border: 1px solid #f2f2f2;
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
@@ -49,9 +78,24 @@ img {
 .info h2 {
   margin: 25px 0 10px 0;
 }
-
+@media all and (min-width: 320px) {
+  .info h2 {
+    font-size: 24px;
+    width: 210px;
+  }
+}
+@media all and (min-width: 375px) {
+  .info h2 {
+    width: 260px;
+  }
+}
 .info p {
   margin-bottom: 20px;
+}
+@media all and (min-width: 375px) {
+  .info p {
+    width: 310px;
+  }
 }
 .info input {
   margin-bottom: 50px;
@@ -60,6 +104,11 @@ img {
   border-radius: 50px;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
 }
+@media all and (min-width: 320px) {
+  .info input {
+    padding: 10px 10px 10px 10px;
+  }
+}
 
 .fonctionnement {
   margin-top: 40px;
@@ -67,14 +116,33 @@ img {
   flex-direction: column;
 }
 
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../css/shrikhand/Shrikhand-Regular.otf");
+}
 h3 {
   margin-left: 30px;
+  margin-top: 20px;
 }
-
+@media all and (min-width: 320px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 375px) {
+  h3 {
+    font-size: 22px;
+  }
+}
 
 .vignette-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.vignette-container section {
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -84,22 +152,51 @@ h3 {
   border-radius: 50px;
   box-shadow: 10px 5px 5px #eaeaea;
   margin-top: 20px;
+  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
+@media all and (min-width: 320px) {
+  .vignette {
+    width: 230px;
+    padding: 20px 50px 20px 0;
+  }
+}
 .vignette p {
   align-self: center;
 }
+.vignette svg {
+  margin-left: 15px;
+}
+
+.mauve {
+  background-color: #f5edff;
+  box-shadow: 10px 5px 5px #f5edff;
+}
 
 .number {
+  position: absolute;
+  z-index: 2;
+  margin-top: 15px;
   border: 1px solid #9356DC;
   background-color: #9356DC;
   border-radius: 50px;
   color: white;
+  text-align: center;
 }
-
+@media all and (min-width: 320px) {
+  .number {
+    left: 10px;
+    height: 20px;
+    width: 20px;
+  }
+}
+@media all and (min-width: 375px) {
+  .number {
+    margin-left: 30px;
+  }
+}
 
 .restaurants {
   margin-top: 40px;
@@ -114,8 +211,14 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
+.vignette2-container section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
 .vignette2 {
+  z-index: 1;
   margin-top: 15px;
   display: flex;
   flex-direction: column;
@@ -123,10 +226,39 @@ h3 {
   border-radius: 10%;
   background-color: white;
 }
-
-
+@media all and (min-width: 320px) {
+  .vignette2 {
+    width: 280px;
+  }
+}
+@media all and (min-width: 375px) {
+  .vignette2 {
+    width: 330px;
+  }
+}
+@media all and (min-width: 320px) {
+  .vignette2 img {
+    height: 150px;
+    width: 280px;
+  }
+}
+@media all and (min-width: 375px) {
+  .vignette2 img {
+    width: 330px;
+  }
+}
 .vignette2 h3 {
   margin: 10px 0 0 10px;
+}
+@media all and (min-width: 320px) {
+  .vignette2 h3 {
+    font-size: 15px;
+  }
+}
+@media all and (min-width: 375px) {
+  .vignette2 h3 {
+    font-size: 18px;
+  }
 }
 
 .descr {
@@ -136,7 +268,55 @@ h3 {
   justify-content: space-between;
 }
 
+@media all and (min-width: 320px) {
+  .coeur {
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+@media all and (min-width: 375px) {
+  .coeur {
+    width: 25px;
+  }
+}
 
+.nouveau {
+  text-align: center;
+  margin-right: 15px;
+  padding: 5px 5px 5px 5px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 30px;
+  color: #119172;
+  background-color: #99e2d0;
+}
+@media all and (min-width: 320px) {
+  .nouveau {
+    width: 70px;
+  }
+}
+
+.menu {
+  background-color: #f2f2f2;
+}
+
+aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.vignette3 {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 footer {
   background-color: #282828;
@@ -148,9 +328,16 @@ footer {
 footer .logo-footer {
   margin-left: 15px;
 }
-
+@media all and (min-width: 320px) {
+  footer .logo-footer {
+    width: 90px;
+  }
+}
 footer svg {
   margin-top: 10px;
+}
+footer .hand {
+  transform: rotate(135deg);
 }
 footer div {
   margin: 0 0 0 15px;
@@ -159,47 +346,6 @@ footer div {
 }
 footer p {
   margin: 10px 10px 0 15px;
-}
-@media all and (min-width: 320px) {
-  .logo {
-    width: 100px;
-  }
-  .icone {
-    width: 15px;
-  }
-  .info h2 {
-    font-size: 22px;
-    width: 210px;
-  }
-  .info input {
-    padding: 10px 10px 10px 10px;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  .vignette {
-    width: 230px;
-    padding: 20px 50px 20px 10px;
-  }
-  .number {
-    padding: 5px 8px 5px 8px;
-  }
-  .vignette2 {
-    width: 280px;
-  }
-  .vignette2 img {
-    height: 150px;
-    width: 280px;
-  }
-  .vignette2 h3 {
-    font-size: 15px;
-  }
-  .coeur {
-    width: 20px;
-  }
-  footer .logo-footer {
-    width: 90px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,13 +7,31 @@
 .wrapper{
     width: 100%;
 }
+@font-face{
+    font-family: "Roboto";
+    src: url("../css/roboto/Roboto-Regular.ttf");
+}
+body{
+    font-family: "Roboto";
 
+}
 // debut header
 header{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 10px;
+   
+    
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media all and (min-width:320px) {
+        width: 300px;
+        }
+
     
 }
 img{
@@ -45,7 +63,7 @@ width:15px;
 .position{
     @extend .wrapper;
     padding: 10px 0 10px 0;
-    border: solid 1px solid #eaeaea;
+    border:  1px solid #eaeaea;
     background-color: #eaeaea;
     display: flex;
     flex-direction: row;
@@ -58,7 +76,8 @@ width:15px;
 }
 
 .info{
-    border: solid 1px solid #f2f2f2;
+   @extend .wrapper;
+    border:  1px solid #f2f2f2;
     background-color:#f2f2f2 ;
     display: flex;
     flex-direction: column;
@@ -68,13 +87,19 @@ width:15px;
         margin:25px 0 10px 0;
        
         @media all and (min-width:320px) {
-            font-size: 22px;
+            font-size: 24px;
             width: 210px;
             
-        }  
+        } 
+        @media all and (min-width:375px){
+            width: 260px;
+        } 
     }
     p{
         margin-bottom: 20px;
+        @media all and (min-width:375px){
+            width: 310px;
+        }
     }
     input{
         margin-bottom: 50px;
@@ -96,45 +121,78 @@ width:15px;
     flex-direction: column;
     
 }
+@font-face{
+    font-family: "Shrikhand";
+    src: url("../css/shrikhand/Shrikhand-Regular.otf");
+}
 h3{
     margin-left: 30px;
+    margin-top: 20px;
     @media all and (min-width:320px) {
         font-size: 20px;
         
     }  
+    @media all and (min-width:375px) {
+        font-size: 22px;
+    }
 }
 .vignette-container{
    
     display: flex;
     flex-direction: column;
     align-items: center;
+    section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        }
 }
+
 .vignette{
     border: solid 1px #f2f2f2;
     background-color: #f2f2f2;
     border-radius: 50px;
     box-shadow:  10px 5px 5px #eaeaea ;
     margin-top: 20px;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     @media all and (min-width:320px) {
         width: 230px;
-        padding: 20px 50px 20px 10px;
+        padding: 20px 50px 20px 0;
     }
     p{
        align-self: center;
    }
+   svg{
+       margin-left: 15px;
+   }
+  
+}
+.mauve{
+    background-color: #f5edff;
+    box-shadow:  10px 5px 5px  #f5edff;
 
 }
 .number{
+   position: absolute;
+   z-index: 2;
+    margin-top: 15px;
     border: 1px solid  #9356DC ;
     background-color:  #9356DC;
     border-radius: 50px;
     color: white;
+    text-align: center;
     @media all and (min-width:320px) {
-        padding: 5px 8px 5px 8px;
-    }    
+        left: 10px;
+        height: 20px;
+        width: 20px;
+        
+    }   
+    @media all and (min-width:375px){
+        margin-left: 30px;
+    } 
 }
 // fin fonctionnement
 // debut restaurant
@@ -146,13 +204,20 @@ h3{
     background-color: #f2f2f2;
 
 }
+
 .vignette2-container{
-   
     display: flex;
     flex-direction: column;
     align-items: center;
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
+
 .vignette2{
+   z-index: 1;
     margin-top: 15px;
     display: flex;
     flex-direction: column;
@@ -161,13 +226,19 @@ h3{
     background-color: white;
     @media all and (min-width:320px) {
         width: 280px;
-    }   
+    }
+    @media all and (min-width:375px){
+        width: 330px;
+    }  
     
     img{
         @media all and (min-width:320px) {
             height: 150px;
             width: 280px;
         }
+        @media all and (min-width:375px){
+            width: 330px;
+        }  
        
     }
     h3{
@@ -176,6 +247,9 @@ h3{
             font-size: 15px;
 
         }
+        @media all and (min-width:375px){
+            font-size: 18px;
+        }  
     }
     
 }
@@ -189,11 +263,49 @@ h3{
 .coeur{
     @media all and (min-width:320px) {
         width: 20px;
+        margin-right: 10px;
 
     }
+    @media all and (min-width:375px){
+        width: 25px;
+    } 
     
 }
+.nouveau{
+    text-align: center;
+    margin-right: 15px;
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 30px;
+    color: #119172;
+    background-color: #99e2d0;
+    @media all and (min-width:320px){
+        width: 70px;
+
+    }
+}
+
 // fin restaurants
+// debut menu
+.menu{
+    background-color: #f2f2f2;
+}
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.vignette3{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+}
+.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 // debut footer
 footer{
     background-color:#282828;
@@ -210,6 +322,9 @@ footer{
     }
     svg{
         margin-top: 10px;
+    }
+    .hand {
+        transform: rotate(135deg);
     }
     div{
         margin:0 0 0 15px;
