@@ -43,9 +43,21 @@ img {
     width: 100px;
   }
 }
+@media all and (min-width: 425px) {
+  .logo {
+    width: 150px;
+  }
+}
 
-.icone {
-  width: 15px;
+@media all and (min-width: 320px) {
+  .icone {
+    width: 15px;
+  }
+}
+@media all and (min-width: 425px) {
+  .icone {
+    width: 20px;
+  }
 }
 
 .intro {
@@ -89,12 +101,24 @@ img {
     width: 260px;
   }
 }
+@media all and (min-width: 425px) {
+  .info h2 {
+    font-size: 30px;
+    width: 300px;
+  }
+}
 .info p {
   margin-bottom: 20px;
 }
 @media all and (min-width: 375px) {
   .info p {
     width: 310px;
+  }
+}
+@media all and (min-width: 425px) {
+  .info p {
+    font-size: 20px;
+    width: 350px;
   }
 }
 .info input {
@@ -109,6 +133,11 @@ img {
     padding: 10px 10px 10px 10px;
   }
 }
+@media all and (min-width: 425px) {
+  .info input {
+    padding: 15px 15px 15px 20px;
+  }
+}
 
 .fonctionnement {
   margin-top: 40px;
@@ -121,17 +150,22 @@ img {
   src: url("../css/shrikhand/Shrikhand-Regular.otf");
 }
 h3 {
-  margin-left: 30px;
   margin-top: 20px;
 }
 @media all and (min-width: 320px) {
   h3 {
     font-size: 20px;
+    margin-left: 30px;
   }
 }
 @media all and (min-width: 375px) {
   h3 {
     font-size: 22px;
+  }
+}
+@media all and (min-width: 425px) {
+  h3 {
+    margin-left: 40px;
   }
 }
 
@@ -163,8 +197,24 @@ h3 {
     padding: 20px 50px 20px 0;
   }
 }
+@media all and (min-width: 375px) {
+  .vignette {
+    width: 250px;
+  }
+}
+@media all and (min-width: 425px) {
+  .vignette {
+    width: 300px;
+    padding: 25px 50px 25px 0;
+  }
+}
 .vignette p {
   align-self: center;
+}
+@media all and (min-width: 425px) {
+  .vignette p {
+    font-size: 18px;
+  }
 }
 .vignette svg {
   margin-left: 15px;
@@ -182,8 +232,8 @@ h3 {
   border: 1px solid #9356DC;
   background-color: #9356DC;
   border-radius: 50px;
-  color: white;
   text-align: center;
+  color: white;
 }
 @media all and (min-width: 320px) {
   .number {
@@ -194,8 +244,17 @@ h3 {
 }
 @media all and (min-width: 375px) {
   .number {
-    margin-left: 30px;
+    margin-left: 20px;
   }
+}
+@media all and (min-width: 425px) {
+  .number {
+    width: 25px;
+    height: 25px;
+  }
+}
+.number p {
+  margin-top: 3px;
 }
 
 .restaurants {
@@ -236,6 +295,11 @@ h3 {
     width: 330px;
   }
 }
+@media all and (min-width: 425px) {
+  .vignette2 {
+    width: 360px;
+  }
+}
 @media all and (min-width: 320px) {
   .vignette2 img {
     height: 150px;
@@ -247,12 +311,16 @@ h3 {
     width: 330px;
   }
 }
-.vignette2 h3 {
-  margin: 10px 0 0 10px;
+@media all and (min-width: 425px) {
+  .vignette2 img {
+    width: 360px;
+    height: 180px;
+  }
 }
 @media all and (min-width: 320px) {
   .vignette2 h3 {
     font-size: 15px;
+    margin: 10px 0 0 10px;
   }
 }
 @media all and (min-width: 375px) {
@@ -260,12 +328,27 @@ h3 {
     font-size: 18px;
   }
 }
+@media all and (min-width: 425px) {
+  .vignette2 h3 {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+}
 
 .descr {
-  margin: 3px 10px 20px 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media all and (min-width: 320px) {
+  .descr {
+    margin: 3px 10px 25px 10px;
+  }
+}
+@media all and (min-width: 425px) {
+  .descr {
+    margin-left: 15px;
+  }
 }
 
 @media all and (min-width: 320px) {
@@ -279,7 +362,6 @@ h3 {
     width: 25px;
   }
 }
-
 .nouveau {
   text-align: center;
   margin-right: 15px;
@@ -333,6 +415,16 @@ footer .logo-footer {
     width: 90px;
   }
 }
+@media all and (min-width: 420px) {
+  footer .logo-footer {
+    width: 110px;
+  }
+}
+@media all and (min-width: 420px) {
+  footer .icone {
+    width: 13px;
+  }
+}
 footer svg {
   margin-top: 10px;
 }
@@ -346,6 +438,11 @@ footer div {
 }
 footer p {
   margin: 10px 10px 0 15px;
+}
+@media all and (min-width: 420px) {
+  footer p {
+    font-size: 18x;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
