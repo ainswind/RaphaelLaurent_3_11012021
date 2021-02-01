@@ -42,14 +42,17 @@ img{
 .logo{
     @media all and (min-width:320px) {
         width: 100px;
-        }
-        @media all and (min-width:425px) {
-            width: 150px;
-            }
-            @media all and (min-width:768px) {
-                width: 200px;
-                }
-    }  
+    }
+    @media all and (min-width:425px) {
+        width: 150px;
+    }
+    @media all and (min-width:768px) {
+        width: 200px;
+    }
+    @media all and (min-width:1024px){
+        width: 250px;
+    }
+}  
 
 // fin header 
 // debut main
@@ -70,6 +73,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 
 }
 .position{
@@ -80,6 +84,8 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: center;
+   
+   
     p{
         color: #515857;
         margin-left: 10px;
@@ -188,6 +194,10 @@ h3{
         font-size: 28px;
 
     }
+    @media all and (min-width:1024px){
+        font-size: 35px;
+
+    }
 }
 .vignette-container{
    
@@ -228,23 +238,35 @@ h3{
         padding: 40px 70px 40px 0;
 
     }
+    @media all and (min-width:1024px){
+        width: 700px;
+        padding: 60px 70px 60px 0;
+
+    }
     p{
        align-self: center;
        @media all and (min-width:425px){
-        font-size: 18px;
-    }
-    @media all and (min-width:768px){
+            font-size: 18px;
+        }
+        @media all and (min-width:768px){
             font-size: 30px;
 
         }
+        @media all and (min-width:1024px){
+            font-size: 32px;
+
+        }
+
 
    }
    svg{
        margin-left: 15px;
        @media all and (min-width:768px){
         width: 30px;
-
-    }
+        }
+        @media all and (min-width:1024px){
+            width: 40px;
+            }
    }
   
 }
@@ -282,13 +304,21 @@ h3{
         margin-left: 50px;
 
     }
+    @media all and (min-width:1024px){
+        width: 60px;
+        height: 60px;
+        margin-left: 90px;
+    }
+
     p{
         margin-top: 3px;
         @media all and (min-width:768px){
             font-size: 25px;
             margin-top: 6px;
-
-
+        }
+        @media all and (min-width:1024px){
+            font-size: 30px;
+            margin-top: 9px;
         }
     }
 }
@@ -462,15 +492,20 @@ footer{
     color: white;
     .logo-footer{
        
-        margin-left: 15px;
+        
         @media all and (min-width:320px) {
             width: 90px;
+            margin-left: 15px;
         }
         @media all and (min-width:420px) {
             width: 110px;
         }
         @media all and (min-width:768px) {
             width: 150px;
+        }
+        @media all and (min-width:1024px) {
+            width: 200px;
+            
         }
     }
     .icone{
@@ -480,9 +515,14 @@ footer{
         @media all and (min-width:768px) {
             width: 23px;
         }
+        @media all and (min-width:1024px) {
+            width: 30px;
+            
+        }
     }
     svg{
         margin-top: 10px;
+       
         
     }
 
@@ -494,6 +534,7 @@ footer{
         display: flex;
         flex-direction: row;
        
+       
     }
     p{
         margin:10px 10px 0 15px; 
@@ -502,6 +543,9 @@ footer{
         }
         @media all and (min-width:768px) {
             font-size: 28px;
+        }
+        @media all and (min-width:1024px) {
+            font-size: 32px;
         }
     }
 }
