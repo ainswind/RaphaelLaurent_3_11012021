@@ -39,6 +39,16 @@ nav {
     width: 190px;
   }
 }
+@media all and (min-width: 425px) {
+  nav {
+    width: 270px;
+  }
+}
+@media all and (min-width: 768px) {
+  nav {
+    width: 340px;
+  }
+}
 nav img {
   justify-self: center;
 }
@@ -46,6 +56,19 @@ nav img {
   nav img {
     width: 140px;
   }
+}
+@media all and (min-width: 425px) {
+  nav img {
+    width: 200px;
+  }
+}
+@media all and (min-width: 768px) {
+  nav img {
+    width: 220px;
+  }
+}
+nav img svg {
+  width: 30px;
 }
 
 img {
@@ -653,10 +676,12 @@ main .back {
   padding-top: 10px;
   background-color: #f2f2f2;
 }
+.menu input {
+  align-self: center;
+}
 @media all and (min-width: 320px) {
   .menu input {
     width: 200px;
-    margin-left: 50px;
     margin-top: 20px;
   }
 }
@@ -665,11 +690,29 @@ aside {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 15px;
 }
 @media all and (min-width: 320px) {
   aside {
     width: 300px;
+    margin-left: 15px;
+  }
+}
+@media all and (min-width: 375px) {
+  aside {
+    width: 320px;
+  }
+}
+@media all and (min-width: 425px) {
+  aside {
+    width: 380px;
+    font-size: 25px;
+  }
+}
+@media all and (min-width: 768px) {
+  aside {
+    width: 650px;
+    font-size: 30px;
+    margin-left: 25px;
   }
 }
 
@@ -677,6 +720,16 @@ aside {
   border-bottom: 1px solid #99E2D0;
   width: fit-content;
   margin-bottom: 20px;
+}
+@media all and (min-width: 425px) {
+  .repas {
+    font-size: 30px;
+  }
+}
+@media all and (min-width: 768px) {
+  .repas {
+    font-size: 35px;
+  }
 }
 
 .vignette3-container {
@@ -701,10 +754,37 @@ aside {
     margin-left: 10px;
   }
 }
+@media all and (min-width: 375px) {
+  .vignette3 {
+    width: 330px;
+  }
+}
+@media all and (min-width: 425px) {
+  .vignette3 {
+    width: 380px;
+  }
+}
+@media all and (min-width: 768px) {
+  .vignette3 {
+    width: 700px;
+    padding: 20px 20px 30px 20px;
+  }
+}
 @media all and (min-width: 320px) {
   .vignette3 h3 {
     font-size: 17px;
     margin: 0 0 10px 0;
+  }
+}
+@media all and (min-width: 425px) {
+  .vignette3 h3 {
+    font-size: 23px;
+  }
+}
+@media all and (min-width: 768px) {
+  .vignette3 h3 {
+    font-size: 27px;
+    margin-left: 15px;
   }
 }
 
@@ -716,6 +796,18 @@ aside {
 @media all and (min-width: 320px) {
   .detail {
     font-size: 14px;
+    margin-right: 10px;
+  }
+}
+@media all and (min-width: 425px) {
+  .detail {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 768px) {
+  .detail {
+    font-size: 22px;
+    margin-left: 15px;
   }
 }
 
