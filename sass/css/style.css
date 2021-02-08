@@ -210,6 +210,7 @@ input {
   border: solid #9356DC 1px;
   border-radius: 50px;
   text-align: center;
+  opacity: 1;
   background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
 }
 @media all and (min-width: 320px) {
@@ -229,6 +230,9 @@ input {
     margin-top: 30px;
   }
 }
+inputhover {
+  opacity: 0.5;
+}
 
 .fonctionnement {
   margin-top: 40px;
@@ -236,10 +240,6 @@ input {
   flex-direction: column;
 }
 
-@font-face {
-  font-family: "Shrikhand";
-  src: url("../css/shrikhand/Shrikhand-Regular.otf");
-}
 @media all and (min-width: 320px) {
   h3 {
     font-size: 20px;
@@ -290,12 +290,13 @@ input {
 }
 
 .vignette {
+  position: relative;
+  z-index: 1;
   border: solid 1px #f2f2f2;
   background-color: #f2f2f2;
   border-radius: 50px;
   box-shadow: 10px 5px 5px #eaeaea;
   margin-top: 20px;
-  z-index: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -401,7 +402,7 @@ input {
 }
 @media all and (min-width: 375px) {
   .number {
-    margin-left: 20px;
+    left: 30px;
   }
 }
 @media all and (min-width: 425px) {
@@ -414,21 +415,21 @@ input {
   .number {
     width: 40px;
     height: 40px;
-    margin-left: 50px;
+    left: 60px;
   }
 }
 @media all and (min-width: 1024px) {
   .number {
     width: 60px;
     height: 60px;
-    margin-left: 90px;
+    left: 95px;
   }
 }
 @media all and (min-width: 1440px) {
   .number {
     width: 80px;
     height: 80px;
-    margin-left: 180px;
+    left: 185px;
   }
 }
 .number p {
@@ -477,6 +478,7 @@ input {
 }
 
 .vignette2 {
+  position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -619,6 +621,9 @@ input {
     width: 40px;
   }
 }
+.coeur path:hover {
+  fill: red;
+}
 
 .nouveau {
   text-align: center;
@@ -653,28 +658,52 @@ input {
   }
 }
 
-main .back {
+main img {
   position: relative;
   z-index: 1;
-  margin-top: 10px;
 }
 @media all and (min-width: 320px) {
-  main .back {
-    width: 100%;
-  }
-}
-@media all and (min-width: 320px) {
-  main .back img {
+  main img {
     width: 100%;
   }
 }
 
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../css/shrikhand/Shrikhand-Regular.otf");
+}
 .menu {
+  position: absolute;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-content: center;
   padding-top: 10px;
   background-color: #f2f2f2;
+}
+@media all and (min-width: 320px) {
+  .menu {
+    top: 205px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+}
+@media all and (min-width: 375px) {
+  .menu {
+    top: 235px;
+  }
+}
+@media all and (min-width: 425px) {
+  .menu {
+    top: 275px;
+  }
+}
+@media all and (min-width: 768px) {
+  .menu {
+    top: 455px;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+  }
 }
 .menu input {
   align-self: center;
@@ -685,6 +714,30 @@ main .back {
     margin-top: 20px;
   }
 }
+.menu h2 {
+  font-family: "Shrikhand";
+}
+@media all and (min-width: 320px) {
+  .menu h2 {
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 375px) {
+  .menu h2 {
+    font-size: 25px;
+  }
+}
+@media all and (min-width: 425px) {
+  .menu h2 {
+    font-size: 30px;
+  }
+}
+@media all and (min-width: 768px) {
+  .menu h2 {
+    font-size: 50px;
+    margin-left: 20px;
+  }
+}
 
 aside {
   display: flex;
@@ -693,8 +746,8 @@ aside {
 }
 @media all and (min-width: 320px) {
   aside {
-    width: 300px;
-    margin-left: 15px;
+    width: 260px;
+    margin-left: 25px;
   }
 }
 @media all and (min-width: 375px) {
@@ -710,9 +763,15 @@ aside {
 }
 @media all and (min-width: 768px) {
   aside {
-    width: 650px;
+    width: 640px;
     font-size: 30px;
     margin-left: 25px;
+    margin-top: 70px;
+  }
+}
+@media all and (min-width: 768px) {
+  aside .coeur {
+    width: 40px;
   }
 }
 
@@ -740,7 +799,7 @@ aside {
 
 .vignette3 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: center;
   font-size: 10px;
   margin-top: 20px;
@@ -788,6 +847,12 @@ aside {
   }
 }
 
+@media all and (min-width: 320px) {
+  .plus {
+    width: 230px;
+  }
+}
+
 .detail {
   display: flex;
   flex-direction: row;
@@ -808,6 +873,16 @@ aside {
   .detail {
     font-size: 22px;
     margin-left: 15px;
+  }
+}
+
+.chevron {
+  background-color: #99E2D0;
+}
+@media all and (min-width: 320px) {
+  .chevron {
+    width: 50px;
+    height: 50px;
   }
 }
 
