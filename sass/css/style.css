@@ -830,6 +830,11 @@ aside {
   }
 }
 @media all and (min-width: 320px) {
+  .vignette3:hover .chevron {
+    right: 20px;
+  }
+}
+@media all and (min-width: 320px) {
   .vignette3 h3 {
     font-size: 17px;
     margin: 0 0 10px 0;
@@ -878,12 +883,23 @@ aside {
 
 .chevron {
   background-color: #99E2D0;
+  display: flex;
+  position: absolute;
+  transition: all 0.5s;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
 }
 @media all and (min-width: 320px) {
   .chevron {
     width: 50px;
     height: 50px;
+    padding: 15px 0px 0 5px;
+    right: -100%;
   }
+}
+.chevron svg {
+  margin: 10px 0 0 10px;
+  width: 20px;
 }
 
 footer {
